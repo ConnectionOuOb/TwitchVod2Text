@@ -1,5 +1,7 @@
 # TwitchVod2Text
 
+```conda create -n whisper```
+
 ## ffmpeg
 ### Install
 ```conda install ffmpeg```
