@@ -1,54 +1,54 @@
 # TwitchVod2Text
-### A script package that can transform twitch VODs to substitles
+### A script package that can transform Twitch VODs to substitles
 
 ## Build environment
 
-### 新建 conda 環境
+### Create conda environment (env)
 ```conda create -n whisper python=3.9 -y```
 
 
-### 開啟 conda 環境
+### Open conda env
 ```conda activate whisper```
 
 
-### 下載 ffmpeg
+### Download ffmpeg
 ```conda install ffmpeg -y```
 
 
-### 下載 streamlink
+### Download streamlink
 ```pip install streamlink```
 
 
-### 下載 whisper
+### Download whisper
 ```pip install -U openai-whisper```
 
 
 
-## whisper
+## How to use whisper
 ### 中文
-#### 基本
+#### Basic usage
 ```whisper --language Chinese --model large {INPUT} --initial_prompt "以下是普通話的句子。"```
 
-#### 指定輸出
+#### Output to srt
 ```whisper --language Chinese --model large {INPUT} --initial_prompt "以下是普通話的句子。" --output_dir {OUTPUT} --output_format srt```
 
-#### 範例
+#### Example
 ```whisper --language Chinese --model large data\input.mp4 --initial_prompt "以下是普通話的句子。" --output_dir data\output --output_format srt```
 
 
-### 英文
-#### 基本
+### English
+#### Basic usage
 ```whisper --model large {INPUT}```
 
-#### 指定輸出
+#### Output to txt
 ```whisper --model large {INPUT} --output_dir {OUTPUT} --output_format txt```
 
-#### 範例
+#### Example
 ```whisper --model large data\input.wav --output_dir data\output --output_format txt```
 
 
 
-## ffmpeg 指令
+## How to use ffmpeg
 ### Extract wav from mp4 
 ```ffmpeg -i {INPUT}.mp4 -vn -ar 16000 -ac 1 -f wav {OUTPUT}.wav```
 
