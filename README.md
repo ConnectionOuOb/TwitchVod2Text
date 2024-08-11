@@ -1,6 +1,7 @@
 # TwitchVod2Text
+### A script package that can transform twitch VODs to substitles
 
-## 建立執行環境
+## Build environment
 
 ### 新建 conda 環境
 ```conda create -n whisper python=3.9 -y```
