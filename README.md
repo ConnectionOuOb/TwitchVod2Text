@@ -3,11 +3,11 @@
 
 ## Build environment
 
-### Create conda environment (env)
+### Create conda environment
 ```conda create -n whisper python=3.9 -y```
 
 
-### Open conda env
+### Open conda environment
 ```conda activate whisper```
 
 
